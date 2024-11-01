@@ -1,0 +1,33 @@
+
+volumes:
+  sql_data: {}
+
+services:
+  sqledge:
+    container_name: azure-sql-edge
+    image: mcr.microsoft.com/azure-sql-edge
+    cap_add: [ 'SYS_PTRACE' ]
+    ports:
+      - 1433:1433
+    restart: always
+    # volumes: 
+    #   - sql_data:/var/opt/mssql
+    environment:
+      MSSQL_SA_PASSWORD: "Adm1n!Adm1n!"
+      ACCEPT_EULA: "Y"
+
+  widgets:
+    depends_on:
+      - "sqledge"
+    restart: "always"
+    image: widgets
+    container_name: widgets
+    build:
+      context: "."
+      dockerfile: "./Dockerfile"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqledge;Database=Phil.Widgets;User=sa;Password=Adm1n!Adm1n!;TrustServerCertificate=True
+    ports:
+      - "8080:8080"
+
+  

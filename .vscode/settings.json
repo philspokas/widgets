@@ -1,0 +1,9 @@
+{
+  "typescript.tsdk": "Phil.Widgets.Web\\node_modules\\typescript\\lib",
+  "dotnet.defaultSolution": "Phil.Widgets.sln",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "cSpell.words": ["Vite", "unplugin", "iconsets", "viewmodels", "composables"]
+}
