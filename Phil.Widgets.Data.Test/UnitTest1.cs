@@ -17,6 +17,7 @@ public class UnitTest1 : TestBase
         var widget2 = Db.Widgets.Find(widget1.WidgetId);
 
         // Assert
+        Assert.NotNull(widget2);
         Assert.Equal(WidgetCategory.Sprecklesprockets, widget2.Category);
 
         // After calling RefreshServices, we have a different DbContext instance
