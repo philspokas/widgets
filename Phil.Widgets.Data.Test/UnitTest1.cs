@@ -13,7 +13,8 @@ public class UnitTest1 : TestBase
         RefreshServices();
 
         // Act
-        var widget2 = Db.Widgets.Single();
+        // var widget2 = Db.Widgets.Single();
+        var widget2 = Db.Widgets.Find(widget1.WidgetId);
 
         // Assert
         Assert.Equal(WidgetCategory.Sprecklesprockets, widget2.Category);
