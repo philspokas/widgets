@@ -15,4 +15,4 @@ RUN apk add --no-cache \
 
 USER $APP_UID
 
-ENTRYPOINT ["dotnet", "Phil.Widgets.Web.dll"]
+ENTRYPOINT ["dotnet", "phil.widgets.web.dll"]
