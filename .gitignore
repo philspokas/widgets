@@ -192,3 +192,6 @@ OpenCover/
 
 # MSBuild Binary and Structured Log
 *.binlog
+
+# coverlet 
+*/CodeCoverage/
