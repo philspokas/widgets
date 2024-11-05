@@ -7,8 +7,6 @@ Sample bicep files to get started and familiar with Bicep
 - Azure CLI
 - Bicep extension in VSCode
 
-
-
 ## Deploymnets with AZ CLI
 
 Eeploy a resource group at subscription scope:
