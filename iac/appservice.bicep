@@ -52,12 +52,12 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2021-02-01' = {
   location: location
   sku: {
     name: 'B1'
-    tier: 'Free'
+    tier: 'Basic'
   }
   kind: 'linux'
   properties: {
     perSiteScaling: false
-    reserved: false
+    reserved: true
   }
 }
 
@@ -68,6 +68,7 @@ resource appService 'Microsoft.Web/sites@2021-02-01' = {
   properties: {
     serverFarmId: appServicePlan.id
     siteConfig: {
+      linuxFxVersion: 'DOTNETCORE|8.0'
       appSettings: [
         {
           name: 'WEBSITE_STACK' 
