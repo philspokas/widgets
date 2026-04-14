@@ -20,5 +20,6 @@
     </PackageReference>
     
     <PackageReference Include="IntelliTect.Coalesce" Version="$(CoalesceVersion)" />
+  <PackageReference Include="System.Security.Cryptography.Xml" Version="8.0.3" />
   </ItemGroup>
 </Project>
